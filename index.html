@@ -1,30 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Pong Game</title>
-  </head>
-  <body>
-    <canvas id="gameCanvas"></canvas>
-    <script>
-      const canvas = document.getElementById('gameCanvas');
-      const ctx = canvas.getContext('2d');
-
-      canvas.width = 400;
-      canvas.height = 300;
-
-      const paddleWidth = 10, paddleHeight = 60;
-      const paddle1 = { x: 10, y: canvas.height/2 - paddleHeight/2 };
-      const paddle2 = { x: canvas.width - paddleWidth - 10, y: canvas.height/2 - paddleHeight/2 };
-
-      function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = 'white';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = 'black';
-        ctx.fillRect(paddle1.x, paddle1.y, paddleWidth, paddleHeight);
-        ctx.fillRect(paddle2.x, paddle2.y, paddleWidth, paddleHeight);
-      }
-      setInterval(draw, 16);
-    </script>
-  </body>
+<head>
+<title>Pong Game</title>
+</head>
+<body>
+<canvas id="gameCanvas" tabindex="0"></canvas>
+<script src="script.js"></script>
+</body>
 </html>
